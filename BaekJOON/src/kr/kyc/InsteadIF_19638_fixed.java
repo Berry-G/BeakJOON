@@ -12,39 +12,39 @@ import java.util.Scanner;
 N + 2번째 줄부터 M개의 각 줄에는 캐릭터의 전투력을 나타내는 음이 아닌 정수가 주어진다. 해당하는 칭호가 없는 전투력은 입력으로 주어지지 않는다.
  */
 
-public class InsteadIF_19637
+public class InsteadIF_19638_fixed
 {
 	public static void main(String[] args)
 	{
 		Scanner scan = new Scanner(System.in);
-		int titleNum = scan.nextInt();			//스타일 수 입력
+		int styleNum = scan.nextInt();			//스타일 수 입력
 		int characterNum = scan.nextInt();		//캐릭터 수 입력
 //		System.out.println(styleNum + "," + characterNum);
 		
-		String[] titleName = new String[titleNum];	//스타일 수 만큼의 배열 생성
-		int[] titleIF = new int[titleNum];		//캐릭터 수 만큼의 배열 생성
+		String[] style = new String[styleNum];	//스타일 수 만큼의 배열 생성
+		int[] styleIF = new int[styleNum];		//캐릭터 수 만큼의 배열 생성
 		
-		for(int i = 0; i<titleNum; i++)			//스타일 수 만큼 스타일 설정(스타일이름 / 조건) 입력
+		for(int i = 0; i<styleNum; i++)			//스타일 수 만큼 스타일 설정(스타일이름 / 조건) 입력
 		{
-			titleName[i] = scan.next();
-			titleIF[i] = scan.nextInt();
+			style[i] = scan.next();
+			styleIF[i] = scan.nextInt();
 		}
 		
 		for(int i = 0; i<characterNum; i++)		//캐릭터 수 만큼 점수 입력
 		{
 			int power = scan.nextInt();
 			
-			for(int j = 0; j<titleNum; j++)
+			for(int j = 0; j<styleNum; j++)
 			{
-				if(power <= titleIF[j])			//조건보다 작지않으면 실행조차 안할건뎅?
+				if(power <= styleIF[j])			//조건보다 작지않으면 실행조차 안할건뎅?
 				{
-					System.out.println(titleName[j]);
+					System.out.println(style[j]);
 					break;
 				}
-				else if(power > titleIF[titleNum-1])	//최고조건보다 크면 최고값을 보내주고
+				else if(power > styleIF[styleNum-1])	//최고조건보다 크면 최고값을 보내주고
 				{
-					System.out.println(titleName[titleNum-1]);
-//					break;
+					System.out.println(style[styleNum-1]);
+					break;
 				}
 			}
 		}
