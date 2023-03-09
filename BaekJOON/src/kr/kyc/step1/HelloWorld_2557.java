@@ -1,4 +1,4 @@
-package kr.kyc;
+package kr.kyc.step1;
 
 public class HelloWorld_2557
 {
