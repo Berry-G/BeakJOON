@@ -2,7 +2,7 @@ package kr.kyc.step1;
 
 import java.util.Scanner;
 
-public class rest_10430 {
+public class Rest_10430 {
 	public static void main(String[] args)
 	{
 		Scanner scan = new Scanner(System.in);
