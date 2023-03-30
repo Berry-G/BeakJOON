@@ -18,7 +18,7 @@ public class AB8_11022 {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			int A = Integer.parseInt(st.nextToken());
 			int B = Integer.parseInt(st.nextToken());
-			String result = "Case #" + (i+1) + ": " Integer.toString(A) + Integer.toString(B) + Integer.toString(A+B) + "\n";
+			String result = "Case #" + (i+1) + ": " + Integer.toString(A) + " + " + Integer.toString(B) + " = " + Integer.toString(A+B) + "\n";
 			bw.write(result);
 		}
 		bw.close();
