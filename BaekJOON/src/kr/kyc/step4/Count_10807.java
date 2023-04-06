@@ -1,4 +1,4 @@
-package kr.kyc.stap4;
+package kr.kyc.step4;
 
 import java.util.Scanner;
 
