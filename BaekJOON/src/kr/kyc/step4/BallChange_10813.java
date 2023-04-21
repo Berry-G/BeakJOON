@@ -1,15 +1,14 @@
 package kr.kyc.step4;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class Goalin_10810 {
+public class BallChange_10813 {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		int n = scanner.nextInt();
-		int m = scanner.nextInt();
-		int []arr = new int[n+1];
+		int n = scanner.nextInt();		//N개 바구니
+		int m = scanner.nextInt();		//M번 바꿈
+		int []arr = new int[n+1];		//첫 바구니는 비어있음
 		for(int i=0; i<=n; i++)
 		{
 			arr[i]=0;
