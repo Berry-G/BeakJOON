@@ -12,7 +12,7 @@ public class BallChange_10813 {
 		for(int i=0; i<=n; i++)
 		{
 			arr[i]=0;
-		}
+		} 
 		for(int j=0; j<m; j++)
 		{
 			int a = scanner.nextInt();	//바구니 시작번호
