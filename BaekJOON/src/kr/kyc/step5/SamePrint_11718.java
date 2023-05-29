@@ -12,13 +12,18 @@ public class SamePrint_11718 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		String sentence;
+		
+		//문장 누적을 위한 객체 생성
+		StringBuilder result = new StringBuilder();
+		//EOF 검사
 		while ((sentence = br.readLine()) != null) {
 			if (sentence.length() == 0) {
 				break;
 			}
 			StringTokenizer st = new StringTokenizer(sentence);
-			bw.write(sentence);
+			result.append(sentence).append('\n');
 		}
+		bw.write(result.toString());
 		bw.close();
 	}
 }
