@@ -7,12 +7,18 @@ public class Palindrome_10988 {
 		Scanner scanner = new Scanner(System.in);
 		String input = scanner.nextLine();
 		char[] chr = input.toCharArray();
-		int len = input.length();
-		for(int i = 0; i<input.length(); i++)
+		int resultCnt = 0;
+		for(int i = 0, cnt = input.length()-1; i<input.length()/2; i++)
 		{
-			
+			//System.out.println(chr[i] + " " + chr[cnt]);
+			if(chr[i] != chr[cnt])
+				resultCnt++;
+			cnt--;
 		}
-		System.out.println(1);
+		if(resultCnt == 0)
+			System.out.println(1);
+		else
+			System.out.println(0);
 	}
 }
 
