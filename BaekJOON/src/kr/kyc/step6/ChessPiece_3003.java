@@ -9,5 +9,15 @@ public class ChessPiece_3003 {
 
 		Scanner scanner = new Scanner(System.in);
 		int[] piece = new int[6];
+		int[] answer = {1, 1, 2, 2, 2, 8};
+		for(int i=0; i<piece.length; i++)
+		{
+			piece[i] = scanner.nextInt();			
+		}
+		
+		for(int i=0; i<piece.length; i++)
+		{
+			System.out.print(answer[i] - piece[i] + " ");
+		}
 	}
 }
