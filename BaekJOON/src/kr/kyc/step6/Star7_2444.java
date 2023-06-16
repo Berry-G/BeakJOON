@@ -12,30 +12,33 @@ public class Star7_2444 {
 		{
 			for(int j=i; j<n-1; j++)
 			{
-				System.out.print("O");		//space
+				System.out.print(" ");		//space
 			}
-			//for(int )
 			for(int j=2; j<(i+1)*4; j=j+2)
 			{
 				System.out.print("*");
 			}
 			System.out.println();
 		}
+		for(int i=1; i<2*n; i++)
+		{
+			System.out.print("*");
+		}
 		System.out.println();
+		int k=n;
 		for(int i=0; i<n-1; i++)
 		{
 			for(int j=0; j<i+1; j++)
 			{
-				System.out.print("O");		//space
+				System.out.print(" ");		//space
 			}
-
-			for(int j=i+15; j<(n)*2; j=j+2)
+			for(int j=0; j<(k-1)*2-1; j++)
 			{
 				System.out.print("*");
 			}
+			k--;
 			System.out.println();
 		}
 					
 	}
-
 }
