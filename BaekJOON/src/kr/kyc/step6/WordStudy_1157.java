@@ -1,6 +1,6 @@
 package kr.kyc.step6;
 
-import java.util.Arrays;
+//import java.util.Arrays;
 import java.util.Scanner;
 
 public class WordStudy_1157 {
@@ -11,7 +11,6 @@ public class WordStudy_1157 {
 		int[] wordCnt = new int[26];
 		for(int i=0; i<word.length(); i++)
 		{
-			System.out.println(wordArray[i]);
 			for(int j=0; j<26; j++)
 			{
 				if(wordArray[i] == 'a' + j || wordArray[i] == 'A' + j)
@@ -21,7 +20,23 @@ public class WordStudy_1157 {
 				}
 			}
 		}
-		System.out.println(Arrays.toString(wordCnt));
+		int max=0;
+		char answer = 0;
+		for(int i=0; i<26; i++)
+		{
+			char spell = (char) ('A' + i);
+			//System.out.println(spell + "=" + wordCnt[i]);
+			if(wordCnt[i] > max)
+			{
+				max = wordCnt[i];
+				answer = spell;
+			}
+			else if(wordCnt[i] == max)
+			{
+				answer = '?';
+			}
+		}
+		System.out.println(answer);
 	}
 
 }
