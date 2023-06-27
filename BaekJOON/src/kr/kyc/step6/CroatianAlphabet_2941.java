@@ -2,7 +2,7 @@ package kr.kyc.step6;
 
 import java.util.Scanner;
 
-public class CroatianAlphabet {
+public class CroatianAlphabet_2941 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		String word = scanner.nextLine();
@@ -23,14 +23,14 @@ public class CroatianAlphabet {
 			for(int i=0; i < word.length()-1; i++)
 			{
 				String compare2 = charToString(i, i+2, wordArray);
-				System.out.println(compare2);
+//				System.out.println(compare2);
 				//3글자 크로아티안 예외처리
 				if(compare2.equals("dz") && i != word.length()-2)
 				{
 					String compare3 = charToString(i, i+3, wordArray);
 					if(compare3.equals(croatian3len[0]))
 						cnt++;
-					System.out.println(compare3);
+//					System.out.println(compare3);
 				}
 				for(int j=0; j<croatian2len.length; j++)
 				{
