@@ -17,13 +17,21 @@ public class CroatianAlphabet {
 		String[] croatian3len = {"dz="};
 		if(word.length() < 2)
 		{
-			
+
 		}
 		else {
 			for(int i=0; i < word.length()-1; i++)
 			{
 				String compare2 = charToString(i, i+2, wordArray);
 				System.out.println(compare2);
+				//3글자 크로아티안 예외처리
+				if(compare2.equals("dz") && i != word.length()-2)
+				{
+					String compare3 = charToString(i, i+3, wordArray);
+					if(compare3.equals(croatian3len[0]))
+						cnt++;
+					System.out.println(compare3);
+				}
 				for(int j=0; j<croatian2len.length; j++)
 				{
 					if(compare2.equals(croatian2len[j]))
